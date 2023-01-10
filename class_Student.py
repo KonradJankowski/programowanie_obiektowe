@@ -64,7 +64,9 @@ def run_example():
     school = creat_school_with_students("Poko-poko")
     print(school)
     for student in school.students:
+        # set random age beetwen 19-35
         x = random.randint(19, 36)
+        # set random if student is promoted or not
         if x % 2 == 0:
             promoted_student(student)
         student_set_age(student, x)
