@@ -34,7 +34,7 @@ def student_set_age(student,age):
 def promoted_student(student):
     student.promoted = True
 
-def add_new_student_to_scholl(school, student):
+def add_new_student_to_school(school, student):
     school.students.append(student)
 
 def creat_school_with_students(school_name):
@@ -66,7 +66,7 @@ def run_example():
     print_student(konrad)
     school = creat_school_with_students("Poko-poko")
     print(school)
-    add_new_student_to_scholl(school, adnieszka)
+    add_new_student_to_school(school, adnieszka)
 
     for student in school.students:
         # set random age beetwen 19-35
