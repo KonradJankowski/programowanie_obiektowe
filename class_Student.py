@@ -34,6 +34,9 @@ def student_set_age(student,age):
 def promoted_student(student):
     student.promoted = True
 
+def add_new_student_to_scholl(school, student):
+    school.students.append(student)
+
 def creat_school_with_students(school_name):
     number_of_students = random.randint(1,20)
     students = []
@@ -51,6 +54,7 @@ def run_example():
     print_student(student)
     promoted_student(student)
     print_student(student)
+    adnieszka = Student("Agnieszka", "Trela")
 
     other_student = Student("Jerzy", "Jurkowski")
     promoted_student(other_student)
@@ -60,17 +64,21 @@ def run_example():
     promoted_student(konrad)
     student_set_age(konrad, 18)
     print_student(konrad)
-
     school = creat_school_with_students("Poko-poko")
     print(school)
+    add_new_student_to_scholl(school, adnieszka)
+
     for student in school.students:
         # set random age beetwen 19-35
         x = random.randint(19, 36)
+
         # set random if student is promoted or not
         if x % 2 == 0:
             promoted_student(student)
         student_set_age(student, x)
         print_student(student)
+
+
 
 if __name__ == '__main__':
     run_example()
