@@ -30,7 +30,7 @@ def create_school_with_students(school_name):
 
 def run_example():
     school = create_school_with_students("klakier")
-    school_as_number = len(school) 
+    school_as_number = len(school)
     print(school_as_number)
 
 if __name__ == '__main__':
