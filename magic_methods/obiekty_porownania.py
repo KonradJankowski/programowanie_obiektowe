@@ -32,6 +32,12 @@ class Money:
             return NotImplemented
         return self.as_cents() <= other.as_cents()
 
+def compare_money_lists(first, second):
+    for money in first:
+        if money not in second:
+            return False
+    return True
+
 def run_example():
     print(f"{Money(dollars=1, cents=20)} == {Money(dollars=100, cents=5)} ?")
     print(Money(dollars=1, cents=20) == Money(dollars=100, cents=5))
@@ -63,6 +69,16 @@ def run_example():
 
     print(f"{Money(dollars=55, cents=20)} in some_money?")
     print(Money(dollars=55, cents=20) in some_money)
+
+    other_money = [
+        Money(dollars=10000, cents=20),
+        Money(dollars=1000, cents=20),
+        Money(dollars=100, cents=20),
+        Money(dollars=10, cents=20),
+        Money(dollars=1, cents=20),
+    ]
+
+    print(compare_money_lists(some_money, other_money))
 
 if __name__ == '__main__':
     run_example()
