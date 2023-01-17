@@ -11,8 +11,10 @@ class Student:
 
 
     def __str__(self):
+        #this is a place where how print info about Student
         return f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}"
 
+    #method to promote student, defaulted student does not have promoted
     def promote(self):
         self.promoted = True
 

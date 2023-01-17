@@ -20,7 +20,7 @@ class School:
         for student in self.students:
             students += "\n"
             students += str(student)
-
+        #here is a place where how print info about school
         return f"School: {self.name}, with {len(self.students)} students: {students}"
 
 

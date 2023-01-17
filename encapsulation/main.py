@@ -18,13 +18,14 @@ def final_grades_with_encapsulation(school):
 
 
 def run_example():
-    school = create_school_with_students("Hogwart")
+    school = create_school_with_students("Poko-poko")
 
     for student in school.students:
         student.promote()
     # print(school)
     # print("=" * 20)
 
+    #without encapsulation
     final_grades_no_encapsulation(school)
     print("=" * 20)
     final_grades_with_encapsulation(school)
