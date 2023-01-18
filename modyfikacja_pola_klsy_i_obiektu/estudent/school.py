@@ -1,4 +1,4 @@
- import random
+import random
 
 from estudent.student import Student
 
@@ -38,8 +38,14 @@ class School:
         return school
 
     def assign_student(self, student):
-        # if len(self.students) < School.MAX_STUDENTS_NUMBER:
-        if len(self.students) < self.MAX_STUDENTS_NUMBER:
+        if len(self.students) < School.MAX_STUDENTS_NUMBER:
             self.students.append(student)
         else:
             print("Nie ma już miejsca!")
+
+    def self_print_max_student_number(self):
+        print(self.MAX_STUDENTS_NUMBER)
+
+    @classmethod
+    def cls_print_max_student_number(cls):
+        print(cls.MAX_STUDENTS_NUMBER)
